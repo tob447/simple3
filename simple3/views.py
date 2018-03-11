@@ -1,4 +1,10 @@
-from django.shortcuts import render
+from .serializers import JSONSerializer
+from rest_framework import viewsets
+from .models import JsonModel
 
-def index(request):
-    return render(request,'index.html')
+class JSONViewSet(viewsets.ModelViewSet):
+    """
+    API endpoint that allows users to be viewed or edited.
+    """
+    queryset = JsonModel.objects.all()
+    serializer_class = JSONSerializer
