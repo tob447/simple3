@@ -34,4 +34,5 @@ class JSONSerializer(serializers.HyperlinkedModelSerializer):
                   "temperature_sht11",
                   "humidity_sht11",
                   "temperature_i2c",
-                  "mean_temperature",)
+                  "mean_temperature",
+                  "voltaje_bateria",)

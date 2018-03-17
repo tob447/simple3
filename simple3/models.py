@@ -32,3 +32,5 @@ class JsonModel(models.Model):
     humidity_sht11= models.CharField(max_length=50,null=True)
     temperature_i2c= models.CharField(max_length=50,null=True)
     mean_temperature = models.CharField(max_length=50,null=True)
+    voltaje_bateria = models.CharField(max_length=50, null=True)
+
