@@ -25,7 +25,7 @@ SECRET_KEY = 'a*yv=ptk8bxb#-hj=87gkesfg$2w9pc%7#kc7)h=wb4s_dvsmd'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["www.cansats3kratos.me","127.0.0.1"]
+ALLOWED_HOSTS = ["www.cansats3kratos.me","127.0.0.1",'localhost']
 
 
 # Application definition
@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.sites',
     'rest_framework',
     'simple3',
+    'corsheaders',
 ]
 
 MIDDLEWARE = [
@@ -50,6 +51,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
 ]
 
 ROOT_URLCONF = 'simple3.urls'
@@ -137,3 +139,5 @@ REST_FRAMEWORK = {
         )
 
 }
+
+CORS_ORIGIN_ALLOW_ALL=True
