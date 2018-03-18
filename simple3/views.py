@@ -6,5 +6,5 @@ class JSONViewSet(viewsets.ModelViewSet):
     """
     API endpoint that allows users to be viewed or edited.
     """
-    queryset = JsonModel.objects.all().order_by('-id')[:50]
+    queryset = JsonModel.objects.all().reverse()[:50]
     serializer_class = JSONSerializer
