@@ -33,4 +33,14 @@ class JsonModel(models.Model):
     temperature_i2c= models.CharField(max_length=50,null=True)
     mean_temperature = models.CharField(max_length=50,null=True)
     voltaje_bateria = models.CharField(max_length=50, null=True)
-
+class TramaCorta(models.Model):
+    gps_time=models.CharField(max_length=50, null=True)
+    gps_latitude=models.CharField(max_length=50, null=True)
+    gps_longitude=models.CharField(max_length=50, null=True)
+    gps_altitude=models.CharField(max_length=50, null=True)
+    gps_course=models.CharField(max_length=50, null=True)
+    gps_speed=models.CharField(max_length=50, null=True)
+    barometer_Pressure=models.CharField(max_length=50, null=True)
+    barometer_Altitude=models.CharField(max_length=50, null=True)
+    temperature_sht11=models.CharField(max_length=50, null=True)
+    voltaje_bateria=models.CharField(max_length=50, null=True)

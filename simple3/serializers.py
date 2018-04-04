@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from .models import JsonModel
+from .models import JsonModel, TramaCorta
 
 class JSONSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
@@ -36,3 +36,17 @@ class JSONSerializer(serializers.HyperlinkedModelSerializer):
                   "temperature_i2c",
                   "mean_temperature",
                   "voltaje_bateria",)
+
+class TramaCortaSerializer(serializers.HyperlinkedModelSerializer):
+    class Meta:
+        model= TramaCorta
+        fields= ("gps_time",
+                "gps_latitude",
+                "gps_longitude",
+                "gps_altitude",
+                "gps_course",
+                "gps_speed",
+                "barometer_Pressure",
+                "barometer_Altitude",
+                "temperature_sht11",
+                "voltaje_bateria")
