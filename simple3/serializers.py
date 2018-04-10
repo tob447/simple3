@@ -53,5 +53,6 @@ class TramaCortaSerializer(serializers.HyperlinkedModelSerializer):
 
 
 class CompresorSerializer(serializers.HyperlinkedModelSerializer):
-    model=Compresores
-    fields=("humidity","temperature","estado")
+    class Meta:
+        model=Compresores
+        fields=("humidity","temperature","estado")
