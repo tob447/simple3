@@ -1,6 +1,6 @@
-from .serializers import JSONSerializer, TramaCortaSerializer
+from .serializers import JSONSerializer, TramaCortaSerializer,CompresorSerializer
 from rest_framework import viewsets
-from .models import JsonModel, TramaCorta
+from .models import JsonModel, TramaCorta,Compresores
 
 class JSONViewSet(viewsets.ModelViewSet):
     """
@@ -12,3 +12,8 @@ class JSONViewSet(viewsets.ModelViewSet):
 class TramaCortaViewSet(viewsets.ModelViewSet):
     queryset = TramaCorta.objects.all().order_by('-id')[:50]
     serializer_class = TramaCortaSerializer
+
+class CompresoresViewset(viewsets.ModelViewSet):
+    queryset = Compresores.objects.all().order_by('-id')[:10]
+    serializer_class = CompresorSerializer
+

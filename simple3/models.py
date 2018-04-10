@@ -44,3 +44,8 @@ class TramaCorta(models.Model):
     barometer_Altitude=models.CharField(max_length=50, null=True)
     temperature_sht11=models.CharField(max_length=50, null=True)
     voltaje_bateria=models.CharField(max_length=50, null=True)
+
+class Compresores(models.Model):
+    humidity=models.CharField(max_length=50,null=True)
+    temperature=models.CharField(max_length=50,null=True)
+    estado=models.CharField(max_length=50,null=True)

@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from .models import JsonModel, TramaCorta
+from .models import JsonModel, TramaCorta,Compresores
 
 class JSONSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
@@ -50,3 +50,8 @@ class TramaCortaSerializer(serializers.HyperlinkedModelSerializer):
                 "barometer_Altitude",
                 "temperature_sht11",
                 "voltaje_bateria")
+
+
+class CompresorSerializer(serializers.HyperlinkedModelSerializer):
+    model=Compresores
+    fields=("humidity","temperature","estado")
