@@ -49,3 +49,7 @@ class Compresores(models.Model):
     humidity=models.CharField(max_length=50,null=True)
     temperature=models.CharField(max_length=50,null=True)
     estado=models.CharField(max_length=50,null=True)
+
+
+class Imagenes(models.Model):
+    img=models.CharField(max_length=10000,null=True);

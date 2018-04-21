@@ -15,12 +15,13 @@ Including another URLconf
 """
 from django.conf.urls import url, include
 from rest_framework import routers
-from .views import JSONViewSet, TramaCortaViewSet,CompresoresViewset
+from .views import JSONViewSet, TramaCortaViewSet,CompresoresViewset,ImgViewSet
 
 router = routers.DefaultRouter()
 router.register(r'data', JSONViewSet)
 router.register(r'corta', TramaCortaViewSet)
 router.register(r'compresores',CompresoresViewset)
+router.register(r'img',ImgViewSet)
 
 urlpatterns = [
     url(r'^', include(router.urls)),

@@ -1,6 +1,7 @@
-from .serializers import JSONSerializer, TramaCortaSerializer,CompresorSerializer
+from .serializers import JSONSerializer, TramaCortaSerializer,CompresorSerializer,ImgSerializer
+
 from rest_framework import viewsets
-from .models import JsonModel, TramaCorta,Compresores
+from .models import JsonModel, TramaCorta,Compresores,Imagenes
 
 class JSONViewSet(viewsets.ModelViewSet):
     """
@@ -17,3 +18,6 @@ class CompresoresViewset(viewsets.ModelViewSet):
     queryset = Compresores.objects.all().order_by('-id')[:10]
     serializer_class = CompresorSerializer
 
+class ImgViewSet(viewsets.ModelViewSet):
+    queryset = Compresores.objects.all().order_by('-id')[:10]
+    serializer_class= ImgSerializer
