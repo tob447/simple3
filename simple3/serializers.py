@@ -61,4 +61,4 @@ class CompresorSerializer(serializers.HyperlinkedModelSerializer):
 class ImgSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model= Imagenes
-        fields=("img")
+        fields=("img",)
