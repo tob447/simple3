@@ -15,7 +15,7 @@ Including another URLconf
 """
 from django.conf.urls import url, include
 from rest_framework import routers
-from .views import JSONViewSet, TramaCortaViewSet,CompresoresViewset,ImgViewSet
+from .views import JSONViewSet, TramaCortaViewSet,CompresoresViewset,ImageViewSet
 
 router = routers.DefaultRouter()
 router.register(r'data', JSONViewSet)
