@@ -52,4 +52,4 @@ class Compresores(models.Model):
 
 
 class Imagenes(models.Model):
-    img=models.CharField(max_length=10000,null=True);
+    img=models.CharField(max_length=30000,null=True);
