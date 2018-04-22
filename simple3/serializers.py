@@ -58,7 +58,7 @@ class CompresorSerializer(serializers.HyperlinkedModelSerializer):
         fields=("humidity","temperature","estado")
 
 
-class ImgSerializer():
+class ImgSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model= Imagenes
         fields=("img")
