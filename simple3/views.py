@@ -19,5 +19,5 @@ class CompresoresViewset(viewsets.ModelViewSet):
     serializer_class = CompresorSerializer
 
 class ImageViewSet(viewsets.ModelViewSet):
-    queryset = Imagenes.objects.all().order_by('-id')[:10]
+    queryset = Imagenes.objects.all().order_by('-id')[0]
     serializer_class= ImgSerializer
