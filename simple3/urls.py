@@ -21,7 +21,7 @@ router = routers.DefaultRouter()
 router.register(r'data', JSONViewSet)
 router.register(r'corta', TramaCortaViewSet)
 router.register(r'compresores',CompresoresViewset)
-router.register(r'img',ImgViewSet)
+router.register(r'images',ImageViewSet)
 
 urlpatterns = [
     url(r'^', include(router.urls)),
