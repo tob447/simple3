@@ -66,4 +66,4 @@ class ImgSerializer(serializers.HyperlinkedModelSerializer):
 class LiveImgSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model= LiveImg
-        fields=("img",)
+        fields=("imgLive",)
