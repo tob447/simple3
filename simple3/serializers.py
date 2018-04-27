@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from .models import JsonModel, TramaCorta,Compresores,Imagenes
+from .models import JsonModel, TramaCorta,Compresores,Imagenes,LiveImg
 
 class JSONSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
@@ -61,4 +61,9 @@ class CompresorSerializer(serializers.HyperlinkedModelSerializer):
 class ImgSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model= Imagenes
+        fields=("img",)
+
+class LiveImgSerializer(serializers.HyperlinkedModelSerializer):
+    class Meta:
+        model= LiveImg
         fields=("img",)

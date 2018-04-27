@@ -1,4 +1,4 @@
-from .serializers import JSONSerializer, TramaCortaSerializer,CompresorSerializer,ImgSerializer
+from .serializers import JSONSerializer, TramaCortaSerializer,CompresorSerializer,ImgSerializer,LiveImgSerializer
 
 from rest_framework import viewsets
 from .models import JsonModel, TramaCorta,Compresores,Imagenes
@@ -21,3 +21,8 @@ class CompresoresViewset(viewsets.ModelViewSet):
 class ImageViewSet(viewsets.ModelViewSet):
     queryset = Imagenes.objects.all().order_by('-id')[:1]
     serializer_class= ImgSerializer
+
+
+class LiveImageViewSet(viewsets.ModelViewSet):
+    queryset = Imagenes.objects.all().order_by('-id')[:1]
+    serializer_class= LiveImgSerializer
