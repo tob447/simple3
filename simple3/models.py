@@ -56,4 +56,4 @@ class Imagenes(models.Model):
 
 
 class LiveImg(models.Model):
-    img=models.CharField(max_length=30000,null=True)
+    imgLive=models.CharField(max_length=30000,null=True)
